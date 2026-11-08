@@ -40,3 +40,21 @@ document.querySelectorAll("[data-link]").forEach((button) => {
       : "REPOSITORI BELUM DIATUR — EDIT RELEASE_LINKS.GITHUB";
   });
 });
+
+const revealTargets = document.querySelectorAll(".certificate-item, .team-card");
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  revealTargets.forEach((target, index) => {
+    target.classList.add("reveal-pending");
+    target.style.setProperty("--reveal-delay", `${(index % 4) * 65}ms`);
+  });
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("reveal-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" });
+
+  revealTargets.forEach((target) => revealObserver.observe(target));
+}
