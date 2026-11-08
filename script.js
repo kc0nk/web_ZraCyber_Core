@@ -1,7 +1,7 @@
 // Isi URL ini saat APK dan repositori sudah tersedia.
 const RELEASE_LINKS = {
   apk: "",
-  github: ""
+  github: "https://github.com/kc0nk/Application_ZraCyber-Core.git"
 };
 
 document.querySelector("#year").textContent = new Date().getFullYear();
