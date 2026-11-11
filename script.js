@@ -1,6 +1,6 @@
-// Isi URL ini saat APK dan repositori sudah tersedia.
+// Tautan menuju folder unduhan APK dan repositori sumber.
 const RELEASE_LINKS = {
-  apk: "",
+  apk: "https://github.com/kc0nk/Application_ZraCyber-Core/tree/a7628857f235e1aed64ec5d60721de0212502cf5/DOWNLOAD_APK",
   github: "https://github.com/kc0nk/Application_ZraCyber-Core.git"
 };
 
