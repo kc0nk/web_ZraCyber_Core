@@ -1,0 +1,26 @@
+.project-preview{padding-top:46px;padding-bottom:24px}
+.project-preview-heading{display:flex;align-items:end;justify-content:space-between;gap:32px;margin-bottom:12px}
+.project-preview-heading h2{margin:18px 0 0;font-size:clamp(38px,4.5vw,54px);line-height:1.13;letter-spacing:-.06em}
+.project-preview-heading>p{max-width:330px;margin:0 0 7px;color:#969bad;font-size:12px;line-height:1.85}
+.project-device-stage{height:clamp(330px,39vw,470px);position:relative;overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 58% 69%,rgba(88,216,238,.09),transparent 42%),linear-gradient(rgba(196,207,236,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(196,207,236,.035) 1px,transparent 1px);background-size:auto,32px 32px,32px 32px}
+.project-device{position:absolute;filter:drop-shadow(0 22px 30px rgba(0,0,0,.38));will-change:transform}
+.project-device img{display:block;width:100%;height:auto}
+.project-device-laptop{width:min(77%,850px);left:6%;bottom:1%;animation:project-float 6.2s ease-in-out infinite;transform:rotate(-2deg)}
+.project-device-phone{width:min(20%,205px);right:10%;bottom:0;z-index:1;animation:project-float 5.4s ease-in-out -1.7s infinite;transform:rotate(3deg)}
+.project-device-label{position:absolute;z-index:2;padding:8px 10px;border:1px solid var(--line);background:rgba(9,11,18,.78);color:#a7adbf;font:8px var(--mono);letter-spacing:.1em}
+.project-device-label-desktop{top:12%;left:10%}
+.project-device-label-mobile{right:7%;top:26%;color:var(--cyan)}
+@keyframes project-float{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@media(max-width:700px){
+  .project-preview{padding-top:28px;padding-bottom:10px}
+  .project-preview-heading{display:block;margin-bottom:8px}
+  .project-preview-heading h2{font-size:40px}
+  .project-preview-heading>p{margin-top:13px}
+  .project-device-stage{height:min(94vw,390px)}
+  .project-device-laptop{width:96%;left:-4%;bottom:18%}
+  .project-device-phone{width:34%;right:3%;bottom:-1%}
+  .project-device-label{font-size:7px;padding:7px 8px}
+  .project-device-label-desktop{top:10%;left:3%}
+  .project-device-label-mobile{top:auto;right:3%;bottom:8%}
+}
+@media(prefers-reduced-motion:reduce){.project-device{animation:none;will-change:auto}}
