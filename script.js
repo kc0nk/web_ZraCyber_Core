@@ -58,3 +58,14 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
 
   revealTargets.forEach((target) => revealObserver.observe(target));
 }
+
+const documentButton = document.querySelector('.download-actions a[href*="docs.google.com"]');
+if (documentButton) {
+  const pptButton = document.createElement("a");
+  pptButton.className = "button button-outline";
+  pptButton.href = "https://canva.link/vj1bz68t0kn9yyd";
+  pptButton.target = "_blank";
+  pptButton.rel = "noopener noreferrer";
+  pptButton.innerHTML = "PPT <span>↗</span>";
+  documentButton.insertAdjacentElement("afterend", pptButton);
+}
